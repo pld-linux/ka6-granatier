@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.2
+%define		kdeappsver	24.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		granatier
 Summary:	Granatier
 Name:		ka6-%{kaname}
-Version:	24.05.2
+Version:	24.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	2f9807f312eabadac5410e661aa49986
+# Source0-md5:	03ac87e237ead57942b64e109b5a259f
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -48,8 +48,8 @@ Granatier is a clone of the classic Bomberman game, inspired by the
 work of the Clanbomber clone.
 
 %description -l pl.UTF-8
-Granatier jest klonem klasycznej gry Bomberman, inspirowanym
-przez działanie klona Clanbombera.
+Granatier jest klonem klasycznej gry Bomberman, inspirowanym przez
+działanie klona Clanbombera.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -91,3 +91,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/64x64/apps/granatier.png
 %{_datadir}/metainfo/org.kde.granatier.appdata.xml
 %{_datadir}/qlogging-categories6/granatier.categories
+%{_datadir}/qlogging-categories6/granatier.renamecategories
